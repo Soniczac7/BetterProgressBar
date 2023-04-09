@@ -14,7 +14,7 @@ namespace BetterProgressBar
         /// </summary>*/
         [Browsable(true)]
         [Category("Appearance")]
-        [DefaultValue(true)]
+        [DefaultValue(false)]
         [Description("Indicates whether the marquee animation should be playing on the progress bar.")]
         public bool MarqueeAnim { get; set; } = false;
 
