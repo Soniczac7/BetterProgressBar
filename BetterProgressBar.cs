@@ -81,7 +81,12 @@ namespace BetterProgressBar
                     {
                         format.Alignment = StringAlignment.Center;
                         format.LineAlignment = StringAlignment.Center;
-                        e.Graphics.DrawString(this.Value.ToString() + "%", this.Font, Brushes.White, this.ClientRectangle, format);
+
+                        // Calculate the percentage of the progress bar
+                        int percent = (int)(((double)this.Value / (double)this.Maximum) * 100);
+
+                        // Draw the percentage text
+                        e.Graphics.DrawString(percent + "%", this.Font, Brushes.White, this.ClientRectangle, format);
                     }
                 }
             }
